@@ -56,7 +56,7 @@ class TestBoggle(unittest.TestCase):
         oneLetterWord = boggle.path_to_word(grid, [(0,0)])
         twoLetterWord = boggle.path_to_word(grid, [(0,0),(1,1)])
         self.assertEqual(oneLetterWord, grid[(0,0)])
-        self.assertEqual(twoLetterWord, grid, [(0,0)] + grid[(1,1)])
+        self.assertEqual(twoLetterWord, grid[(0,0)] + grid[(1,1)])
 
     def test_search_grid_for_words(self):
         grid = {(0, 0): 'A', (0, 1): 'B', (1, 0): 'C', (1, 1): 'D'}
